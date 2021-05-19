@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JS hide/show element</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container container--mobile">
+            <header class="header">
+                <div class="burger burger--black" onclick="blockShowHide(this, '.menu', ['burger--black', 'burger--blue']);">
+                    <span></span>
+                </div>
+            </header>
+            <nav class="menu hidden">
+                <ul class="menu__list">
+                    <li class="menu__item">Платья</li>
+                    <li class="menu__item">Туники</li>
+                    <li class="menu__item">Куртки</li>
+                    <li class="menu__item">Шорты</li>
+                    <li class="menu__item">Штаны</li>
+                    <li class="menu__item">Ботинки</li>
+                </ul>
+            </nav>
+            <div class="content"></div>        
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

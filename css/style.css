@@ -1,0 +1,212 @@
+/* --- default --- */
+body, select, input, textarea {
+  font-family: Tahoma, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+input:active, input:focus, button:active, button:focus {
+  outline: none;
+  border: none;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Headers (h1,h2,etc) have no default font-size or margin, you'll want to define those yourself. */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, a, p, span, strong {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+h1, .h1 {
+  font-size: 24px;
+  margin: 0.207em 0;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 20px;
+  margin: 0.75em 0 0.4em 0;
+  font-weight: 600;
+}
+
+h4, .h4 {
+  font-size: 17px;
+}
+
+h5, .h5 {
+  font-family: 'Open Sans', serif;
+  font-size: 15px;
+  margin: 0 0 0.7em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover {
+  color: #ab5e70;
+}
+
+p {
+  margin: 0.533em 0 0.667em 0;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1360px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container--mobile {
+  width: 480px;
+  overflow: 1px solod #999999;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container--mobile {
+  background: #a9ccf7;
+  height: 600px;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.burger {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 20px;
+  z-index: 3;
+  padding: 10px 16px;
+  margin: 14px 0;
+  cursor: pointer;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  top: 9px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.burger:before, .burger:after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.burger:before {
+  top: 0;
+}
+
+.burger:after {
+  bottom: 0;
+}
+
+.burger.active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.burger.active:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+}
+
+.burger.active:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.burger--black span {
+  background-color: #000;
+}
+
+.burger--black:before, .burger--black:after {
+  background-color: #000;
+}
+
+.burger--blue span {
+  background-color: #0971f8;
+}
+
+.burger--blue:before, .burger--blue:after {
+  background-color: #0971f8;
+}
+
+.menu {
+  position: absolute;
+  background: #fff;
+  min-width: 150px;
+  height: calc(100% - 80px);
+  border-right: 1px solid #999;
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.menu__list {
+  padding-left: 10px;
+}
+
+.menu__item {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #555;
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
