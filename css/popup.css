@@ -1,0 +1,205 @@
+/* --- default --- */
+body, select, input, textarea {
+  font-family: Tahoma, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+input:active, input:focus, button:active, button:focus {
+  outline: none;
+  border: none;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Headers (h1,h2,etc) have no default font-size or margin, you'll want to define those yourself. */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, a, p, span, strong {
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+h1, .h1 {
+  font-size: 30px;
+  margin: 0.207em 0;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 20px;
+  margin: 0.75em 0 0.4em 0;
+  font-weight: 600;
+}
+
+h4, .h4 {
+  font-size: 17px;
+}
+
+h5, .h5 {
+  font-family: 'Open Sans', serif;
+  font-size: 15px;
+  margin: 0 0 0.7em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a:hover {
+  color: #ab5e70;
+}
+
+p {
+  margin: 0.533em 0 0.667em 0;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1360px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container--mobile {
+  width: 480px;
+  overflow: 1px solod #999999;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  z-index: 50;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup__content {
+  background-color: #fff;
+  color: #000;
+  max-width: 800px;
+  min-width: 400px;
+  padding: 30px;
+  position: relative;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__content_image {
+  padding: 0;
+}
+
+.popup__image img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.popup__title {
+  font-size: 32px;
+  margin: 0 0 1em 0;
+}
+
+.popup__title--min {
+  font-size: 18px;
+  margin: 3px 5px;
+}
+
+.central {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.central a {
+  color: blue;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 479px) {
+  .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=popup.css.map */
