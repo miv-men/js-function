@@ -15,6 +15,37 @@ if (formReviews) {
     });
 }
 
+function formValidation(form) {
+
+    let valid = true;
+    const fields = form.querySelectorAll('.field');
+    const fi = form.querySelectorAll('.form__input');
+
+    const errors = form.querySelectorAll('.error-text');
+
+    for (let i = 0; i < errors.length; i++){
+        forClassContains(fi, 'remove', 'form__error');
+        errors[i].remove();
+    }
+
+    for (let i = 0; i < fields.length; i++) {
+        if (!fields[i].value) {
+            markErrorInput('обязательно для заполнения', [fields[i]], [fields[i]]);
+            valid = false;
+        }
+    }
+
+    const password = form.querySelector('.password');
+    const passwordConfirmation = form.querySelector('.passwordConfirmation');
+
+    if (password && passwordConfirmation && password.value !== passwordConfirmation.value) {
+        markErrorInput('пароли не совпадают', [password, passwordConfirmation], [passwordConfirmation]);
+        valid = false;
+    }
+
+    return valid;
+}
+
 function ajax(url, post = {}, tag = '') {
     
     let formData;
