@@ -16,10 +16,21 @@ if (formReviews) {
 }
 
 function ajax(url, post = {}, tag = '') {
+    
+    let formData;
+    if (Array.isArray(post)){
+        post = new Map(post);
+        formData = new FormData;
+
+        for (let [key, value] of post)
+            formData.append(key, value);
+    }else{
+        formData = post;
+    }
 
     let result = fetch(url,{
         method: 'POST',
-        body: post,
+        body: formData,
         // headers: {
         //     'content-type': 'application/json'
         // }
