@@ -8,8 +8,51 @@
 </head>
 <body>
    <h1>Форма регистрации</h1>
-   <form action="/include/validForm.php">
-   
+   <form action="/include/validForm.php" method="post" enctype="multipart/form-data" class="reviews-valid reviews__form form" onsubmit="CheckForm(this);">
+      <input type="hidden" class="js-check" name="JSC">
+      <div class="form__row">
+            <label class="form__label" for="modal-review_name"><sub>*</sub>Имя:</label>
+            <input id="modal-review_name" class="form__input field" type="text" name="name" placeholder="Введите имя">
+      </div>
+      <div class="form__row">
+            <label class="form__label" for="modal-review_text"><sub>*</sub>Отзыв:</label>
+            <textarea rows="3" cols="30" name="text_comment" class="textarea-review" id="modal-review_text"></textarea>
+      </div>
+      <div class="form__row">
+            <label class="form__label" for="modal-review_phone"><sub>*</sub>Телефон:</label><span class="bx_sof_req" ></span>
+            <input id="modal-review_phone" class="form__input field" type="tel" name="phone" placeholder="+7(999)-999-99-99">
+      </div>
+      <div class="form__row">
+            <label class="form__label" for="modal-review_email"><sub>*</sub>Эл.почта:</label>
+            <input id="modal-review_email" class="form__input field" type="email" name="email" placeholder="Введите почту">
+      </div>
+      <div class="form__row">
+            <label class="form__label" for="modal-review_city"><sub>*</sub>Город:</label>
+            <input id="modal-review_city" class="form__input field" type="text" name="city" placeholder="Введите горлд">
+      </div>
+      <div class="form__row">
+            <label class="form__label" for="modal-review_company">Организация:</label>
+            <input id="modal-review_company" class="form__input" type="text" name="company" placeholder="Введите организвцию">
+      </div>
+
+      <div class="form__row field__wrapper">
+
+            <input type="file" name="file" id="field__file" class="field__file" multiple>
+
+            <label class="field__file-wrapper" for="field__file">
+               <div class="field__file-fake form__input">Прикрепить фото</div>
+               <div class="field__file-button">
+                  <span class="icon-attach"></span>
+               </div>
+            </label>
+      </div>
+      <br>
+      <br>
+      <input class="btn btn-danger_custom btn-masks" type="submit" name="review" value="Оставить отзыв">
+
+      <div class="agreement">
+            Нажимая кнопку "Оставить отзыв" вы соглашаетесь с <a href="/terms-of-use/" target="_blank">пользовательским соглашением</a>
+      </div>
    </form>
    <script src="js/validForm.js"></script>
 </body>
