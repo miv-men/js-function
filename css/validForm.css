@@ -1,0 +1,131 @@
+.reviews__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 6px;
+}
+
+.reviews__stat {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 5px 15px rgba(204, 204, 204, 0.25);
+          box-shadow: 0 5px 15px rgba(204, 204, 204, 0.25);
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 25px 15px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.reviews__last {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.reviews__item {
+  margin-top: 20px;
+}
+
+.reviews__date {
+  font-size: 13px;
+  margin: 0 0 2px 0;
+  color: #999;
+}
+
+.reviews__button {
+  display: block;
+  margin: 0 auto 15px;
+  width: 100%;
+  padding: 7px;
+}
+
+.reviews__show-all {
+  border: 1px solid #CD1A1D;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  margin: 10px 0 0 0;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 7px 0 9px;
+  color: #CD1A1D;
+}
+
+.reviews__show-all:hover {
+  border: 1px solid #B80000;
+  color: #B80000;
+}
+
+.reviews__score {
+  margin: 2px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews__score > .owl-reviews__stars {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
+}
+
+.reviews__h5 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.reviews__form .form__label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 3px;
+}
+
+.reviews__form .form__label sub {
+  color: red;
+  width: 12px;
+  display: block;
+  float: left;
+}
+
+.reviews__form .form__input {
+  border: 1px solid #DEDEDE;
+  border-radius: 3px;
+  padding: 6px;
+  width: 100%;
+  margin: 3px 0;
+  height: 40px;
+}
+
+.reviews__form .form__input.form__error {
+  border: 1px solid red;
+  margin: 3px 0 14px 0;
+}
+
+.reviews__form textarea {
+  border: 1px solid #DEDEDE;
+  border-radius: 3px;
+  width: 100%;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.reviews__success {
+  text-align: center;
+  color: #bfd064;
+}
+
+.reviews .h3 {
+  text-align: center;
+  font-weight: 500;
+}
+/*# sourceMappingURL=validForm.css.map */

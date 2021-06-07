@@ -1,0 +1,101 @@
+.reviews {
+   &__row {
+     display: flex;
+     flex-direction: column-reverse;
+     margin: 6px;
+   }
+   &__stat {
+     flex: 0 0 100%;
+     background: #FFFFFF;
+     box-shadow: 0 5px 15px rgba(204, 204, 204, 0.25);
+     border-radius: 4px;
+     margin: 20px 0;
+     padding: 25px 15px;
+     height: max-content;
+   }
+   &__last {
+     flex: 0 0 100%;
+ 
+   }
+   &__item {
+     margin-top: 20px;
+   }
+   &__date {
+     font-size: 13px;
+     margin: 0 0 2px 0;
+     color: #999;
+   }
+   &__button {
+     display: block;
+     margin: 0 auto 15px;
+     width: 100%;
+     padding: 7px;
+   }
+   &__show-all {
+     border: 1px solid #CD1A1D;
+     box-sizing: border-box;
+     border-radius: 4px;
+     margin: 10px 0 0 0;
+     text-align: center;
+     display: block;
+     width: 100%;
+     padding: 7px 0 9px;
+     color: #CD1A1D;
+   }
+   &__show-all:hover {
+     border: 1px solid #B80000;
+     color: #B80000;
+   }
+   &__score {
+     margin: 2px 0;
+     display: flex;
+   }
+   &__score > .owl-reviews__stars {
+     flex: 0 0 90px;
+   }
+   &__h5 {
+     margin-top: 10px;
+     font-weight: bold;
+     font-size: 13px;
+   }
+   &__form {
+     .form__label {
+       width: 100%;
+       text-align: left;
+       margin-bottom: 3px;
+       sub {
+         color: red;
+         width: 12px;
+         display: block;
+         float: left;
+       }
+     }
+     .form__input {
+       border: 1px solid #DEDEDE;
+       border-radius: 3px;
+       padding: 6px;
+       width: 100%;
+       margin: 3px 0;
+       height: 40px;
+       &.form__error {
+         border: 1px solid red;
+         margin: 3px 0 14px 0;
+       }
+     }
+     textarea {
+       border: 1px solid #DEDEDE;
+       border-radius: 3px;
+       width: 100%;
+       padding: 8px;
+       font-size: 13px;
+     }
+   }
+   &__success {
+     text-align: center;
+     color: #bfd064;
+   }
+   .h3 {
+     text-align: center;
+     font-weight: 500;
+   }
+ }
