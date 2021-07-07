@@ -1,20 +1,23 @@
-const formReviews = document.querySelector('.reviews-valid');
-if (formReviews) {
+const forms = document.querySelectorAll('.form');
+if (forms) {
+maskPhone('.reviews-valid input[type="tel"]');
+    let urlForm;
+    for (let i in forms){
+        if (typeof forms[i] === 'object') {
+            forms[i].addEventListener('submit', function (event) {
+	    	/* // При отправки формы php
+		if (!formValidation(formReviews))
+		event.preventDefault();
+		*/
+                event.preventDefault();
+                if (urlForm = formValidation(forms[i])){
+                    let params = new FormData(forms[i]);
 
-   maskPhone('.reviews-valid input[type="tel"]');
-    formReviews.addEventListener('submit', function (event) {
-        /* // При отправки формы php
-        if (!formValidation(formReviews))
-            event.preventDefault();
-            */
-        event.preventDefault();
-        if (formValidation(formReviews)){
-            let params = new FormData(formReviews);
-
-            ajax('/include/validForm.php', params, '.reviews__success');
+                    ajax(urlForm, params, '.reviews__success');
+                }
+            });
         }
-
-    });
+    }
 }
 
 function formValidation(form) {
@@ -58,7 +61,11 @@ function formValidation(form) {
        valid = false;
    }
 
-   return valid;
+   if(valid)
+        return false;
+    else
+        return form.getAttribute("action");
+	
 }
 
 function markErrorInput(text, border, divText = false) {
