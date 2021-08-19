@@ -5,10 +5,8 @@ const winHeight = document.documentElement.clientHeight;
 let lazyPosution = [];
 if(lazy.length > 0){
     lazy.forEach(img => {
-        if (img.dataset.src || img.dataset.srcset){
             lazyPosution.push(img.getBoundingClientRect().top + pageYOffset)
             lazyScrollCheck();
-        }
     });
 }
 
